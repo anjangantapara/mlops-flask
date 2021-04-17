@@ -1,6 +1,6 @@
+import os
 from flask import Flask
 from pprint import pprint
-import os
 from redis import Redis
 
 app = Flask(__name__)

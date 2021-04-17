@@ -4,7 +4,12 @@ import os
 from redis import Redis
 
 app = Flask(__name__)
-r = Redis(host=os.enviro.get, port=6379, db=0', decode_responses=True)
+r = Redis(
+	host=os.environ.get("REDIS_HOST", "localhost"),
+	 port=6379,
+	 db='0',
+	 decode_responses=True
+	)
 REDIS_NAMES_KEY = "names"
 
 
